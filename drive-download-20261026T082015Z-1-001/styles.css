@@ -1,0 +1,207 @@
+:root {
+  /* CSS-змінні зберігають повторювані значення в одному місці. */
+  --page-background: #f4f7fb;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted-text: #526079;
+  --accent: #1455c0;
+  --accent-dark: #0d3d8d;
+  --border: #d8e0ee;
+  --focus: #f59e0b;
+  --radius: 1rem;
+  --shadow: 0 0.75rem 2rem rgb(23 32 51 / 12%);
+}
+
+/* border-box не дозволяє padding і border непомітно збільшити ширину елемента. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  background: var(--page-background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.2rem;
+}
+
+.site-header,
+.site-footer {
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.header-note,
+.eyebrow,
+.task-meta dt {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 0.875rem;
+}
+
+.page-shell {
+  width: min(100% - 2rem, 42rem);
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin-block: 0.4rem 0.75rem;
+  font-size: clamp(2rem, 8vw, 3.25rem);
+}
+
+.task-card,
+.tips {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.task-card {
+  padding: 1.25rem;
+}
+
+.task-card__header,
+.task-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.task-card__header h2 {
+  margin-block: 0.3rem 0;
+}
+
+.badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  background: #fff3cd;
+  color: #664d03;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-block: 1.5rem;
+}
+
+.task-meta div {
+  min-width: 8rem;
+}
+
+.task-meta dd {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+}
+
+.task-card__description {
+  color: var(--muted-text);
+}
+
+.checklist {
+  padding-left: 1.25rem;
+}
+
+.checklist li + li {
+  margin-top: 0.5rem;
+}
+
+.task-card__footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+button {
+  border: 0;
+  border-radius: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.tips {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+}
+
+.tips h2 {
+  margin-top: 0;
+}
+
+.site-footer {
+  color: var(--muted-text);
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .page-shell {
+    padding-block: 4rem;
+  }
+
+  .task-card,
+  .tips {
+    padding: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

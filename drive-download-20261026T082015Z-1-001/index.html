@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Flow — навчальний план</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#main-content">Study Flow</a>
+      <p class="header-note">Навчальний приклад HTML і CSS</p>
+    </header>
+
+    <!-- main позначає головний, унікальний вміст цієї сторінки. -->
+    <main id="main-content" class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Ваш план на тиждень</p>
+        <h1 id="page-title">Зосередьтеся на найважливішому</h1>
+        <p>
+          Невелика картка завдання показує, як семантичний HTML і CSS
+          утворюють зрозумілий інтерфейс.
+        </p>
+      </section>
+
+      <!-- article доречний, бо картку можна зрозуміти окремо від решти сторінки. -->
+      <article class="task-card" aria-labelledby="task-title">
+        <header class="task-card__header">
+          <div>
+            <p class="eyebrow">Найближче завдання</p>
+            <h2 id="task-title">Завершити макет мобільного екрана</h2>
+          </div>
+          <span class="badge">Високий пріоритет</span>
+        </header>
+
+        <!-- time має машинозчитуваний datetime і зрозумілий для людини текст. -->
+        <dl class="task-meta">
+          <div>
+            <dt>Термін</dt>
+            <dd><time datetime="2026-09-08T18:00">8 вересня, 18:00</time></dd>
+          </div>
+          <div>
+            <dt>Оцінка часу</dt>
+            <dd>2 години</dd>
+          </div>
+          <div>
+            <dt>Предмет</dt>
+            <dd>UX-дизайн</dd>
+          </div>
+        </dl>
+
+        <p class="task-card__description">
+          Підготуйте один екран застосунку: заголовок, картку вмісту та
+          головну кнопку дії. Перевірте макет на вузькому екрані.
+        </p>
+
+        <h3>Кроки</h3>
+        <ul class="checklist">
+          <li>Намалювати простий ескіз структури.</li>
+          <li>Створити HTML-розмітку з логічними заголовками.</li>
+          <li>Додати CSS-відступи, кольори та видимий фокус.</li>
+        </ul>
+
+        <footer class="task-card__footer">
+          <!-- button правильний для дії; у демо він не виконує JavaScript. -->
+          <button type="button">Позначити як заплановане</button>
+          <a href="#tips">Поради до виконання</a>
+        </footer>
+      </article>
+
+      <section id="tips" class="tips" aria-labelledby="tips-title">
+        <h2 id="tips-title">Що варто дослідити в прикладі</h2>
+        <ul>
+          <li>Як клас <code>task-card</code> об’єднує стилі картки.</li>
+          <li>Як Flexbox розміщує заголовок і бейдж.</li>
+          <li>Як media query змінює відступи на широкому екрані.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">© 2026 Study Flow — навчальний макет</footer>
+  </body>
+</html>

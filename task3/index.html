@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Events — найближча подія</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Пункт 2: main, article, header, time і footer -->
+    <main>
+      <h1>Найближча подія</h1>
+      <article class="event-card">
+        <header>
+          <!-- Пункт 3: назва події -->
+          <h2>Відкрита лекція: Мобільний UX</h2>
+          <!-- Пункт 3: дата й час через time з datetime, далі місце проведення -->
+          <p class="event-meta">
+            <time datetime="2026-11-12T16:00">12 листопада, 16:00</time>
+            <span>Аудиторія 204, корпус А</span>
+          </p>
+        </header>
+        <!-- Пункт 3: короткий опис -->
+        <p>
+          Лекція про те, як проєктувати зручні інтерфейси для мобільних
+          застосунків і перевіряти їх на реальних користувачах.
+        </p>
+        <!-- Пункт 3: список із трьох тез -->
+        <ul>
+          <li>Чим мобільний інтерфейс відрізняється від вебсторінки.</li>
+          <li>Розміри елементів, зручні для натискання пальцем.</li>
+          <li>Як швидко перевірити макет на користувачах.</li>
+        </ul>
+        <footer>
+          <!-- Пункт 4: кнопка без дії -->
+          <button type="button">Зареєструватися</button>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
