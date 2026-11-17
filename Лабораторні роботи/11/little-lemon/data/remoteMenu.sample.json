@@ -1,0 +1,6 @@
+{
+  "menu": [
+    { "id": 101, "title": "Borscht", "price": "9", "category": { "title": "Soups" } },
+    { "id": 102, "title": "Uzvar", "price": "3.5", "category": { "title": "Beverages" } }
+  ]
+}
