@@ -1,0 +1,34 @@
+// Завдання A3. Клас учасника
+
+class Attendee {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+    this.registeredEventIds = [];
+  }
+
+  register(eventId) {
+    if (this.registeredEventIds.includes(eventId)) {
+      return false;
+    }
+
+    this.registeredEventIds.push(eventId);
+    return true;
+  }
+
+  cancel(eventId) {
+    const index = this.registeredEventIds.indexOf(eventId);
+    if (index === -1) {
+      return false;
+    }
+
+    this.registeredEventIds.splice(index, 1);
+    return true;
+  }
+
+  isRegisteredFor(eventId) {
+    return this.registeredEventIds.includes(eventId);
+  }
+}
+
+module.exports = { Attendee };
