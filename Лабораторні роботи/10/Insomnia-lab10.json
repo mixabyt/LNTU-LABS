@@ -1,0 +1,294 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-17T12:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v12",
+  "resources": [
+    {
+      "_id": "wrk_lab10",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Лабораторна 10 — HTTP",
+      "scope": "collection",
+      "description": ""
+    },
+    {
+      "_id": "env_lab10",
+      "_type": "environment",
+      "parentId": "wrk_lab10",
+      "name": "Base Environment",
+      "data": {
+        "base": "https://httpbin.org"
+      }
+    },
+    {
+      "_id": "req_lab10_01",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "01 GET — базовий",
+      "method": "GET",
+      "url": "{{ _.base }}/get",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1000,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_02",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "02 GET — параметри й заголовки",
+      "method": "GET",
+      "url": "{{ _.base }}/get",
+      "body": {},
+      "parameters": [
+        {
+          "name": "title",
+          "value": "Деруни з грибами"
+        },
+        {
+          "name": "category",
+          "value": "main"
+        },
+        {
+          "name": "limit",
+          "value": "3"
+        },
+        {
+          "name": "language",
+          "value": "uk"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "X-Lab-Topic",
+          "value": "10"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -999,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_03",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "03 POST — URL-encoded form",
+      "method": "POST",
+      "url": "{{ _.base }}/post",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "name": "title",
+            "value": "Деруни з грибами"
+          },
+          {
+            "name": "category",
+            "value": "main"
+          },
+          {
+            "name": "price",
+            "value": "145"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -998,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_04",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "04 POST — Multipart Form",
+      "method": "POST",
+      "url": "{{ _.base }}/post",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "title",
+            "value": "Деруни з грибами"
+          },
+          {
+            "name": "category",
+            "value": "main"
+          },
+          {
+            "name": "price",
+            "value": "145"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -997,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_05",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "05 POST — JSON",
+      "method": "POST",
+      "url": "{{ _.base }}/post",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Деруни з грибами\",\n  \"category\": \"main\",\n  \"price\": 145,\n  \"available\": true,\n  \"published\": {\n    \"year\": 2026,\n    \"month\": 11,\n    \"day\": 17\n  },\n  \"tags\": [\n    \"вегетаріанське\",\n    \"гаряче\"\n  ]\n}"
+      },
+      "parameters": [
+        {
+          "name": "source",
+          "value": "lab10"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -996,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_06",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "06 PUT — представлення",
+      "method": "PUT",
+      "url": "{{ _.base }}/put",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Деруни з грибами\",\n  \"category\": \"main\",\n  \"price\": 145,\n  \"available\": true,\n  \"published\": {\n    \"year\": 2026,\n    \"month\": 11,\n    \"day\": 17\n  },\n  \"tags\": [\n    \"вегетаріанське\",\n    \"гаряче\"\n  ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -995,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_07",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "07 PATCH — зміна ціни",
+      "method": "PATCH",
+      "url": "{{ _.base }}/patch",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"price\": 155\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -994,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_08",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "08 DELETE — echo",
+      "method": "DELETE",
+      "url": "{{ _.base }}/delete",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -993,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_09",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "09 GET — 204",
+      "method": "GET",
+      "url": "{{ _.base }}/status/204",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -992,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_10",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "10 GET — 404",
+      "method": "GET",
+      "url": "{{ _.base }}/status/404",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -991,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_11",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "11 GET — 500",
+      "method": "GET",
+      "url": "{{ _.base }}/status/500",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -990,
+      "settingEncodeUrl": true
+    },
+    {
+      "_id": "req_lab10_12",
+      "_type": "request",
+      "parentId": "wrk_lab10",
+      "name": "12 GET — метод не дозволено",
+      "method": "GET",
+      "url": "{{ _.base }}/post",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -989,
+      "settingEncodeUrl": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+HTTP/2 405 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy, WWW-Authenticate
+allow: OPTIONS, POST
+content-length: 178
+content-type: text/html
+x-content-type-options: nosniff
+date: Tue, 17 Nov 2026 12:17:14 GMT
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>405 Method Not Allowed</title>
+<h1>Method Not Allowed</h1>
+<p>The method is not allowed for the requested URL.</p>

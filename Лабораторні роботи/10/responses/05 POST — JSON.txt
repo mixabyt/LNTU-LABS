@@ -1,0 +1,42 @@
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy, WWW-Authenticate
+content-length: 872
+content-type: application/json
+x-content-type-options: nosniff
+date: Tue, 17 Nov 2026 12:17:12 GMT
+
+{
+  "args": {
+    "source": "lab10"
+  },
+  "headers": {
+    "Accept": "application/json",
+    "Content-Length": "190",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.18.0"
+  },
+  "method": "POST",
+  "origin": "x.x.x.x",
+  "url": "https://httpbin.org/post?source=lab10",
+  "data": "{\"title\":\"Деруни з грибами\",\"category\":\"main\",\"price\":145,\"available\":true,\"published\":{\"year\":2026,\"month\":11,\"day\":17},\"tags\":[\"вегетаріанське\",\"гаряче\"]}",
+  "files": {},
+  "form": {},
+  "json": {
+    "available": true,
+    "category": "main",
+    "price": 145,
+    "published": {
+      "day": 17,
+      "month": 11,
+      "year": 2026
+    },
+    "tags": [
+      "вегетаріанське",
+      "гаряче"
+    ],
+    "title": "Деруни з грибами"
+  }
+}

@@ -1,0 +1,20 @@
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy, WWW-Authenticate
+content-length: 202
+content-type: application/json
+x-content-type-options: nosniff
+date: Tue, 17 Nov 2026 12:17:10 GMT
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.18.0"
+  },
+  "method": "GET",
+  "origin": "x.x.x.x",
+  "url": "https://httpbin.org/get"
+}

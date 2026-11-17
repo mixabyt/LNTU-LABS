@@ -1,0 +1,30 @@
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy, WWW-Authenticate
+content-length: 442
+content-type: application/json
+x-content-type-options: nosniff
+date: Tue, 17 Nov 2026 12:17:11 GMT
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Content-Length": "116",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.18.0"
+  },
+  "method": "POST",
+  "origin": "x.x.x.x",
+  "url": "https://httpbin.org/post",
+  "data": "",
+  "files": {},
+  "form": {
+    "category": "main",
+    "price": "145",
+    "title": "Деруни з грибами"
+  },
+  "json": null
+}

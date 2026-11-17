@@ -1,0 +1,28 @@
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy, WWW-Authenticate
+content-length: 366
+content-type: application/json
+x-content-type-options: nosniff
+date: Tue, 17 Nov 2026 12:17:13 GMT
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Content-Length": "13",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.18.0"
+  },
+  "method": "PATCH",
+  "origin": "x.x.x.x",
+  "url": "https://httpbin.org/patch",
+  "data": "{\"price\":155}",
+  "files": {},
+  "form": {},
+  "json": {
+    "price": 155
+  }
+}
